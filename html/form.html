@@ -13,12 +13,12 @@
       autocomplete="off"
     >
       <h2>네이버검색</h2>
-      <input name="query" />
+      <input name="query" autofocus readonly/>
       <input type="submit" />
     </form>
     <form method="get" action="https://www.google.com/search">
       <h2>구글검색</h2>
-      <input name="q" />
+      <input name="q" placeholder="검색어를 입력하세요" required/>
       <input type="submit" />
     </form>
 </form>
@@ -36,8 +36,8 @@
         
     </fieldset>
     <input type="submit" />
-    <br /> <br /> <br /> <br />
-    <fieldset>
+    <br /> <br /> <br /> <br /> 
+    <fieldset></fieldset>
         <legend>배송 정보</legend>
         <ul>
             <li>
@@ -58,7 +58,11 @@
             </li>
         </ul>
     </fieldset>
-    <input type="submit">
+    <input type="submit" value="주문하기">
+    <input type="reset" value="취소하기">
+    <input type="button" value="공지 창 열기">
+
+    <input type="hidden" name="이름" value="나는 안보임">
 </form>
  <label>아이디(6자 이상)<input type="checkbox"></label>
  <input type="text" id="user-id">
@@ -72,8 +76,49 @@
          <input type="submit" value="로그인">
      </fieldset>
  </form>
- <div id="container">
-     <h1>회원 가입을 환영합니다.</h1>
- </div>
+ <ul>
+     <li>
+         <label><input type="checkbox" value="s_3">선물용 3kg</label>
+         <input type="number" min="0" max="5">개 (최대 5개)
+     </li>
+     <li>
+        <label><input type="checkbox" value="s_5">선물용 5kg</label>
+        <input type="number" min="0" max="3" value="1">개 (최대 3개)
+    </li>
+ </ul>
+ <ul>
+    <li>
+        <label><input type="checkbox" value="s_3">선물용 3kg</label>
+        <input type="range" min="0" max="5">개 (최대 5개)
+    </li>
+    <li>
+       <label><input type="checkbox" value="f_5">선물용 5kg</label>
+       <input type="range" min="0" max="3" value="1">개 (최대 3개)
+   </li>
+</ul>
+<h1>날짜 지정하기</h1>
+<input type="date" min="2022-01-20" max="2022-02-14">
+<input type="month">
+<input type="week">
+<h1>시간 지정하기</h1>
+<input type="time">
+<input type="datetime-local">
+<input type="file">
+ <textarea cols="40" rows="4"> 기본값 </textarea>
+ <br /> <br /> <br /> <br />
+ <label for="prod1">상품 선택</label>
+ <select id="prod1">
+     <option value="special_3" selected>선물용 3kg</option>
+     <option value="special_5" >선물용 5kg</option>
+     <option value="family_3" >가정용 3kg</option>
+     <option value="family_5" >가정용 5kg</option>
+
+     <label for="pro2">포장 여부</label>
+     <input type="text" id="pro2" list="pack">
+     <datalist id="pack">
+         <option value="package">선물 포장</option>
+         <option value="no_package">포장 안 함</option>
+     </datalist>
+ </select>
   </body>
 </html>
