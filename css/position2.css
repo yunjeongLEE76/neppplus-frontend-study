@@ -1,0 +1,17 @@
+#contents {
+  background: url(https://w.namu.la/s/6c4cbef8a2ebd0ffa185db94acdd257c2b66ddb3bfd57092f595c92e1f2830d0bfce829417deaa7ed5176beffa152c4841c0ab1d370c47916f0cdc85c5bac4fa52a24299a6c8ad41795f49791c80bbf73c96177c8ed932a21ddbf8327eca69d5)
+    no-repeat;
+  background-size: cover;
+  width: 800px;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+h1 {
+  color: #fff;
+  font-size: 120px;
+  text-shadow: 2px 3px 0 #000;
+  position: absolute;
+  right: 100px;
+  bottom: 100px;
+}

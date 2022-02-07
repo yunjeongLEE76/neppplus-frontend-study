@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .pos {
+      padding: 10px;
+      width: 300px;
+      border: 1px solid;
+      background: #fff;
+    }
+    #pos1 {
+      position: absolute;
+      left: 50px;
+      top: 50px;
+    }
+    #pos2 {
+      position: absolute;
+      right: 100px;
+      top: 100px;
+    }
+    #pos3 {
+      position: absolute;
+      left: 100px;
+      bottom: 100px;
+    }
+    .rel {
+      position: relative;
+      background: blue;
+      width: 760px;
+      height: 600px;
+    }
+    #static {
+      position: static;
+    }
+    #reltive-1 {
+      position: relative;
+    }
+    #relative-2 {
+      position: relative;
+      left: 100px;
+      top: -50px;
+    }
+  </style>
+  <body>
+    <div class="rel">
+      <p class="pos" id="pos1">
+        …neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+        consectetur, adipisci velit, sed quia non numquam eius modi tempora
+        incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim
+        ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+        laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel
+        eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+        molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas
+        nulla pariatur?
+      </p>
+      <p class="pos" id="pos2">
+        Nor again is there anyone who loves or pursues or desires to obtain pain
+        of itself, because it is pain, but because occasionally circumstances
+        occur in which toil and pain can procure him some great pleasure. To
+        take a trivial example, which of us ever undertakes laborious physical
+        exercise, except to obtain some advantage from it? But who has any right
+        to find fault with a man who chooses to enjoy a pleasure that has no
+        annoying consequences, or one who avoids a pain that produces no
+        resultant pleasure?"
+      </p>
+      <p class="pos" id="pos3">
+        fugiat, quo voluptas nulla pariatur? [33] At vero eos et accusamus et um
+        rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus
+        maiores alias consequatur aut perferendis doloribus asperiores repellat.
+      </p>
+      <p id="static">
+        take a trivial example, which of us ever undertakes laborious physical
+        exercise, except to obtain some advantage from it? But who has any right
+      </p>
+      <p id="relative-1">
+        laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel
+        eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+        molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas
+      </p>
+      <p id="relative-2">
+        sectetur, adipisci velit, sed quia non numquam eius modi tempora
+        incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim
+        ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+        laboriosam, nisi ut aliquid ex ea commodi con
+      </p>
+    </div>
+  </body>
+</html>
