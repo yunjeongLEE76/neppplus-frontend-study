@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #signup label {
+      background: #fff;
+      float: left;
+      font-size: 13px;
+      width: 110px;
+    }
+    #check {
+      background: white;
+      border-color: black;
+      border: 1px solid gray;
+      text-align: center;
+      margin-top: 30px;
+    }
+    #check2 {
+      height: 30px;
+      border-radius: 40%;
+      padding: 5px 20px;
+    }
+    #box {
+      margin-top: 30px;
+    }
+    .input-wrapper {
+      margin-top: 15px;
+    }
+
+    #signup input[redonly] {
+      border: none;
+    }
+    #signup input[type="text"],
+    #signup input[type="password"],
+    #signup input[type="tell"],
+    #signup input[type="email"] {
+      border: 1ps solid #ccc;
+      border-radius: 3px;
+      font-size: 13px;
+      padding: 5px;
+      width: 200px;
+    }
+    #signup input[required] {
+      border: 1px red solid;
+    }
+  </style>
+  <body>
+    <div id="signup">
+      <form>
+        <fieldset>
+          <legend><b>로그인정보</b></legend>
+          <div class="input-wrapper">
+            <label>아이디</label>
+            <input type="text" required />
+          </div>
+          <div>
+            <label>비밀번호</label>
+            <input type="password" required />
+          </div>
+          <div>
+            <label>비밀번호 확인</label>
+            <input type="password" required />
+          </div>
+          <div>
+            <label>회원 등급</label>
+            <input type="text" readonly autofocus value="준회원" redonly />
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <div id="signup">
+      <div id="box">
+        <form>
+          <fieldset>
+            <legend><b>개인 정보</b></legend>
+            <div>
+              <label>이름</label>
+              <input type="text" placeholder="5자 미만 공백없이" required />
+            </div>
+            <div>
+              <label>메일 주소</label>
+              <input type="email" placeholder="abcd@domain.com" required />
+            </div>
+            <div>
+              <label>연락처</label>
+              <input type="tel" />
+            </div>
+          </fieldset>
+          <div id="check">
+            <button id="check2" type="button">제출</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
