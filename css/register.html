@@ -35,10 +35,8 @@
     #signup input[redonly] {
       border: none;
     }
-    #signup input[type="text"],
-    #signup input[type="password"],
-    #signup input[type="tell"],
-    #signup input[type="email"] {
+    #signup input:not[type="radio"],
+     {
       border: 1ps solid #ccc;
       border-radius: 3px;
       font-size: 13px;
@@ -48,10 +46,17 @@
     #signup input[required] {
       border: 1px red solid;
     }
+    #signup fieldset:last-of-type {
+      border: none;
+      margin-bottom: 0;
+    }
+    #signup button:hover {
+      background-color: #222;
+      color: #fff;
+    }
   </style>
   <body>
     <div id="signup">
-      <form>
         <fieldset>
           <legend><b>로그인정보</b></legend>
           <div class="input-wrapper">
@@ -71,31 +76,25 @@
             <input type="text" readonly autofocus value="준회원" redonly />
           </div>
         </fieldset>
-      </form>
-    </div>
-    <div id="signup">
-      <div id="box">
-        <form>
-          <fieldset>
-            <legend><b>개인 정보</b></legend>
-            <div>
-              <label>이름</label>
-              <input type="text" placeholder="5자 미만 공백없이" required />
-            </div>
-            <div>
-              <label>메일 주소</label>
-              <input type="email" placeholder="abcd@domain.com" required />
-            </div>
-            <div>
-              <label>연락처</label>
-              <input type="tel" />
-            </div>
-          </fieldset>
-          <div id="check">
-            <button id="check2" type="button">제출</button>
+        <fieldset>
+          <legend><b>개인 정보</b></legend>
+          <div>
+            <label>이름</label>
+            <input type="text" placeholder="5자 미만 공백없이" required />
           </div>
-        </form>
-      </div>
+          <div>
+            <label>메일 주소</label>
+            <input type="email" placeholder="abcd@domain.com" required />
+          </div>
+          <div>
+            <label>연락처</label>
+            <input type="tel" />
+          </div>
+        </fieldset>
+        <fieldset>
+          <button>제출</button>
+        </fieldset>
+      </form>
     </div>
   </body>
 </html>

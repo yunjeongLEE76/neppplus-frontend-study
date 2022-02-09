@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .contents {
+      width: 500px;
+    }
+    .contents :nth-child(3) {
+      background-color: #ffff00;
+    }
+    .contents p:nth-of-type(3) {
+      background-color: #00b900;
+    }
+    table {
+      border: 1px solid lightgray;
+      border-spacing: 0;
+      width: 180px;
+    }
+    table tr:nth-of-type(2n + 1) {
+      background: lightgray;
+      color: black;
+    }
+    table tr td {
+      padding: 10px 20px;
+    }
+    li.new::after {
+      content: "new!!";
+      font-size: x-small;
+      padding: 2px 4px;
+      margin: 0 10px;
+      border-radius: 2px;
+      background: #f00;
+      color: #fff;
+    }
+  </style>
+  <body>
+    <div class="contents">
+      <h2>이용 안내</h2>
+      <p>
+        orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliq
+      </p>
+      <p>
+        ommodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla paria
+      </p>
+      <h2>객실 소개</h2>
+      <p>
+        ommodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla paria
+      </p>
+      <h2>예약 방법 및 요금</h2>
+      <p>
+        sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris
+      </p>
+    </div>
+    <table>
+      <h1>웹 개발</h1>
+      <tr>
+        <td>HTML</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+      </tr>
+      <tr>
+        <td>자바스크립트</td>
+      </tr>
+      <tr>
+        <td>React</td>
+      </tr>
+      <tr>
+        <td>node.js</td>
+      </tr>
+    </table>
+    <section>
+      <div class="container">
+        <h1>제품 목록</h1>
+        <ul>
+          <li class="new">제품 A</li>
+          <li>제품 B</li>
+          <li>제품 C</li>
+          <li class="new">제품 D</li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>
