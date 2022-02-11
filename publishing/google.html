@@ -6,151 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <style>
-    ul {
-      list-style: none;
-    }
-    #header {
-      display: flex;
-      justify-content: space-between;
-      font-size: 14px;
-    }
-
-    .wrapper {
-      padding: 15px;
-    }
-
-    .korea {
-      color: gray;
-      background: lightgray;
-      padding: 15px 30px;
-      margin-bottom: 0%;
-      margin-top: 0;
-    }
-    .left {
-      display: flex;
-      align-items: center;
-    }
-
-    .store {
-      padding: 0px 20px;
-    }
-    .store:hover {
-      text-decoration: underline;
-    }
-    .information:hover {
-      text-decoration: underline;
-    }
-    .right {
-      display: flex;
-      align-items: center;
-    }
-    .image {
-      padding: 0px 20px;
-    }
-    .icon {
-      height: 28px;
-      width: 28px;
-    }
-    .log {
-      margin-left: 25px;
-      padding: 8px 25px;
-      background: rgb(30, 111, 233);
-      border: 1px solid transparent;
-      color: white;
-      border-radius: 5px;
-      margin-top: 0;
-      font-size: 14px;
-    }
-    .bottom {
-      display: flex;
-      border-top: 1px solid rgb(161, 161, 161);
-      color: gray;
-      background: lightgray;
-      justify-content: space-between;
-      margin-top: 0%;
-    }
-    .bottom-left {
-      display: flex;
-    }
-    .bottom-right {
-      display: flex;
-    }
-    .work {
-      padding-left: 25px;
-    }
-    .search {
-      padding-left: 25px;
-    }
-    .personal {
-      padding-right: 30px;
-    }
-    .terms {
-      padding-left: 25px;
-      padding-right: 50px;
-    }
-    .title {
-      display: flex;
-      font-size: 80px;
-      font-weight: bold;
-    }
-    .blue {
-      color: rgb(44, 135, 255);
-    }
-    .red {
-      color: rgb(255, 74, 42);
-    }
-    .yellow {
-      color: rgb(252, 223, 59);
-    }
-    .green {
-      color: rgb(22, 184, 30);
-    }
-  </style>
+  <link rel="stylesheet" href="./google.css" />
   <body>
-    <div class="wrapper">
+    <div class="page-wrapper">
       <header id="header">
-        <ul class="left">
-          <li class="information">Google 정보</li>
-          <li class="store">스토어</li>
+        <ul class="left-list">
+          <li><a href="#">Google 정보</a></li>
+          <li><a href="#">스토어</a></li>
         </ul>
-        <ul class="right">
-          <li>Gamil</li>
-          <li class="image">이미지</li>
-          <img
-            class="icon"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOkNdoUF3jOGOzCbSfDqWnpCSEXrBBxDD2sg&usqp=CAU"
-          />
-          <input type="button" class="log" value="로그인" />
+        <ul class="right-list">
+          <li><a href="#">Gmail</a></li>
+          <li><a href="#">이미지</a></li>
+          <li>
+            <div class="img-menu-wrapper">
+              <img
+                class="img-menu"
+                src="https://cdn2.iconfinder.com/data/icons/css-vol-2/24/menu-grid-o-256.png"
+              />
+            </div>
+          </li>
+          <li><button class="btn-login">로그인</button></li>
         </ul>
       </header>
+      <main id="main">
+        <img
+          class="main-img"
+          src="https://cdn.lamanus.kr/wp-content/uploads/2018/08/28225854/google-2048x1536.png"
+        />
+        <div class="main-middle">
+          <img
+            class="main-search-help"
+            src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_search_48px-256.png"
+          />
+          <input type="text" class="main-search" />
+          <img
+            class="main-search-img"
+            src="https://cdn3.iconfinder.com/data/icons/fluent-solid-24px-vol-4/24/ic_fluent_keyboard_24_filled-256.png"
+          />
+          <img
+            class="main-search-mic"
+            src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-25-256.png"
+          />
+        </div>
+        <div class="title-bottom">
+          <input
+            type="text"
+            class="title-bottom-left"
+            value="Google 검색"
+            readonly
+          />
+          <input
+            type="text"
+            class="title-bottom-right"
+            value="i'm Feeling Lucky"
+            readonly
+          />
+        </div>
+      </main>
+      <footer id="footer">
+        <div class="bar1">대한민국</div>
+        <div class="bar2">
+          <ul>
+            <li><a href="#">광고</a></li>
+            <li><a href="#">비즈니스</a></li>
+            <li><a href="#">검색의 원리</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">약관</a></li>
+            <li><a href="#">설정</a></li>
+          </ul>
+        </div>
+      </footer>
     </div>
-    <main>
-      <ul class="title">
-        <li class="blue">G</li>
-        <li class="red">o</li>
-        <li class="yellow">o</li>
-        <li class="blue">g</li>
-        <li class="green">l</li>
-        <li class="red">e</li>
-      </ul>
-    </main>
-    <footer>
-      <ul class="korea">
-        <li>대한민국</li>
-      </ul>
-      <div class="bottom">
-        <ul class="bottom-left">
-          <li>광고</li>
-          <li class="work">비즈니스</li>
-          <li class="search">검색의 원리</li>
-        </ul>
-        <ul class="bottom-right">
-          <li class="personal">개인정보처리방침</li>
-          <li>약관</li>
-          <li class="terms">설정</li>
-        </ul>
-      </div>
-    </footer>
   </body>
 </html>
