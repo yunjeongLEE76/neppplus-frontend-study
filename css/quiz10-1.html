@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    ul {
+      list-style: none;
+    }
+    .navi a {
+      display: inline-block;
+      text-align: center;
+      padding: 10px;
+      text-decoration: none;
+    }
+
+    .navi a:hover[href="six"] {
+      background: #b30000;
+      color: #fff;
+    }
+    .navi ul li {
+      float: left;
+      width: 110px;
+      transition: 0.5s ease-in;
+    }
+    .navi a:link,
+    .navi a:visited {
+      display: block;
+      font-size: 16px;
+      color: #000;
+      padding: 10px;
+      text-decoration: none;
+    }
+    .navi a:hover {
+      background: #555;
+      color: #fff;
+    }
+    a[href] {
+      background: #ccc;
+      border: 1px solid gray;
+      font-weight: bold;
+      margin: 0;
+    }
+    a[href="six"] {
+      border: none;
+    }
+  </style>
+  <body>
+    <nav class="navi">
+      <ul>
+        <li><a href>메뉴1</a></li>
+        <li><a href>메뉴2</a></li>
+        <li><a href>메뉴3</a></li>
+        <li><a href>메뉴4</a></li>
+        <li><a href>메뉴5</a></li>
+        <li><a href="six">메뉴6</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

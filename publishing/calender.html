@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    table {
+      border: 1px solid gray;
+      margin: 0 auto;
+    }
+    th,
+    td {
+      border: 1px solid lightgray;
+      padding: 30px;
+      text-align: center;
+      font-weight: bold;
+    }
+    #sunday {
+      background: rgb(247, 47, 47);
+      color: white;
+    }
+    th {
+      background: palegoldenrod;
+    }
+    .choice {
+      padding: 10px 20px;
+      border-radius: 10px;
+      margin: 10px 50%;
+      position: right top;
+    }
+    .calender:hover .today {
+      background: red;
+      color: white;
+    }
+  </style>
+  <body>
+    <table class="calender">
+      <caption>
+        <b>2022년 2월</b>
+      </caption>
+
+      <tr>
+        <th>일</th>
+        <th>월</th>
+        <th>화</th>
+        <th>수</th>
+        <th>목</th>
+        <th>금</th>
+        <th>토</th>
+      </tr>
+      <tr>
+        <td id="sunday">30</td>
+        <td>31</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td id="sunday">6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td class="today">10</td>
+        <td>11</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td id="sunday">13</td>
+        <td>14</td>
+        <td>15</td>
+        <td>16</td>
+        <td>17</td>
+        <td>18</td>
+        <td>19</td>
+      </tr>
+      <tr>
+        <td id="sunday">20</td>
+        <td>21</td>
+        <td>22</td>
+        <td>23</td>
+        <td>24</td>
+        <td>25</td>
+        <td>26</td>
+      </tr>
+      <tr>
+        <td id="sunday">27</td>
+        <td>28</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+      </tr>
+    </table>
+    <input
+      type="button"
+      class="choice"
+      value="3월"
+      onclick="window.open('./calender2.html')"
+    />
+  </body>
+</html>
