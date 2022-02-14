@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function addNumber(a, b) {
+      //     var sum = a + b;
+      //     alert(sum);
+      //   }
+      //   addNumber(3, 5);
+      //   function addNumber() {
+      //     var num1 = 2;
+      //     var num2 = 3;
+      //     var sum = num1 + num2;
+      //     alert("결괏값:" + sum);
+      //   }
+      //   addNumber();
+      //   addNumber();
+      //   addNumber();
+      //   function addNumber(num1, num2) {
+      //     return num1 + num2;
+      //   }
+      //   let result = addNumber(2, 3);
+      //   document.write("두 수를 더한 값" + result);
+      //   function multiple(a, b = 5, c = 10) {
+      //     return a * b + c;
+      //   }
+      //   multiple(5, 10, 20);
+      //   multiple(10, 20);
+      //   multiple(30);
+      function calcSum(n) {
+        let sum = 0;
+        for (let i = 1; i < n + 1; i++) {
+          sum += i;
+        }
+        document.write(`1부터${n}까지 더하면${sum}`);
+      }
+      const userNumber = prompt("얼마까지 더할까요?");
+      if (userNumber !== null) {
+        calcSum(parseInt(userNumber));
+      }
+    </script>
+  </body>
+</html>
