@@ -156,6 +156,9 @@ body {
   font-size: 20;
   cursor: pointer;
 }
+/* .title-botttom-right:hover {
+  border: 1px solid gray;
+} */
 #footer {
   background: #f2f2f2;
   color: #70757a;
