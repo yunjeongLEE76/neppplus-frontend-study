@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .vending-machine {
+      border: 1px solid gray;
+
+      flex-grow: 1;
+    }
+    .drink {
+      display: flex;
+      flex-direction: column;
+      width: 100px;
+    }
+    .food {
+      width: 150px;
+    }
+    .won {
+      background-color: rgb(197, 227, 245);
+      font-size: 18px;
+      width: 100px;
+      height: 50px;
+      border: none;
+      border-radius: 30%;
+    }
+  </style>
+  <body>
+    <div class="vending-machine">
+      <div class="money" id="total">
+        <button class="won" onclick="insertCoin(100)">100원</button>
+        <button class="won" onclick="insertCoin(500)">500원</button>
+        <button class="won" onclick="insertCoin(1000)">1000원</button>
+        <button class="won" onclick="insertCoin(5000)">5000원</button>
+      </div>
+      <div class="drink" id="buy">
+        <img
+          class="food"
+          src="http://image.auction.co.kr/itemimage/18/51/4e/18514e7601.jpg"
+        />
+        <button onclick="buy(1200)">
+          콜라<br />
+          1200원
+        </button>
+        <img
+          class="food"
+          src="https://red.lotteon.com/_m2_/_rsc_/LM8801094133207/?sref=http://image.lottemart.com/lim/static_root/images/proddescrimg/images/001771/%ED%99%98%ED%83%80_%ED%8C%8C%EC%9D%B8%EC%95%A0%ED%94%8C_355ml_%EC%A0%95%EB%A9%B4.jpg"
+        />
+        <button onclick="buy(1000)">환타<br />1000원</button>
+        <img
+          class="food"
+          src="http://img.danawa.com/prod_img/500000/961/671/img/1671961_1.jpg?shrink=330:330&_v=20180523153555"
+        />
+        <button onclick="buy(1300)">나랑드 사이다<br />1300원</button>
+        <img
+          class="food"
+          src="data:image/jpeg;base64,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"
+        />
+        <button onclick="buy(700)">비타500<br />700원</button>
+        <img
+          class="food"
+          src="http://img.danawa.com/prod_img/500000/612/776/img/3776612_1.jpg?shrink=330:330&_v=20170531101832"
+        />
+        <button onclick="buy(700)">오로나민C<br />700원</button>
+        <img
+          class="food"
+          src="http://img.danawa.com/prod_img/500000/264/205/img/2205264_1.jpg?shrink=330:330&_v=20180529103258"
+        />
+        <button onclick="buy(1000)">레쓰비<br />1000원</button>
+      </div>
+      <button onclick="change()">거스름돈 <br />가져가</button>
+      <p>현재금액 : <span id="total-money">0</span>원</p>
+      <p>선택한 품목 : <span id="subject">0</span>입니다.</p>
+    </div>
+
+    <script>
+      let totalMoney = 0;
+
+      const insertCoin = (money) => {
+        totalMoney = totalMoney + money;
+        document.querySelector("#total-money").innerHTML = totalMoney;
+
+        console.log(totalMoney);
+      };
+
+      const buy = (money) => {
+        if (money < totalMoney) {
+          totalMoney = totalMoney - money;
+          document.querySelector("#total-money").innerHTML = totalMoney;
+          console.log(totalMoney);
+        } else {
+          alert("구매불가,잔액부족");
+        }
+      };
+
+      const change = (money) => {
+        totalMoney = 0;
+
+        console.log(totalMoney);
+      };
+    </script>
+  </body>
+</html>
