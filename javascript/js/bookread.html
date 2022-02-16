@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .book {
+      border: 3px solid black;
+      background-color: rgb(85, 191, 240);
+      border-radius: 50%;
+      height: 300px;
+      width: 300px;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <div class="book">
+      <h1>책 읽기</h1>
+      <p><span id="result"></span>일 연속으로 <br />책 읽기를 달성했군요.</p>
+      <p>축하합니다!</p>
+    </div>
+    <script>
+      const now = new Date("2020-02-16");
+      const firstDay = new Date("2020-02-02");
+
+      let toNow = now.getTime();
+      let toFirst = firstDay.getTime();
+      let passedTime = toNow - toFirst;
+
+      passedTime = Math.round(passedTime / (1000 * 60 * 60 * 24));
+
+      document.querySelector(`#result`).innerText = passedTime;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+h1 {
+  background-color: black;
+  width: 200px;
+  color: white;
+  padding: 15px;
+}
+p {
+  color: blue;
+  margin: 0;
+  font-weight: 600;
+  font-size: large;
+}
