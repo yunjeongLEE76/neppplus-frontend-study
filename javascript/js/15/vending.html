@@ -74,7 +74,7 @@
       </div>
       <button onclick="change()">거스름돈 <br />가져가</button>
       <p>현재금액 : <span id="total-money">0</span>원</p>
-      <p>선택한 품목 : <span id="subject">0</span>입니다.</p>
+      <p>메세지 : <span id="message"></span></p>
     </div>
 
     <script>
@@ -82,25 +82,32 @@
 
       const insertCoin = (money) => {
         totalMoney = totalMoney + money;
-        document.querySelector("#total-money").innerHTML = totalMoney;
-
-        console.log(totalMoney);
+        printTotalMoney();
+        printMessage(`${money}원을 넣으셨습니다.`);
       };
 
       const buy = (money) => {
-        if (money < totalMoney) {
-          totalMoney = totalMoney - money;
-          document.querySelector("#total-money").innerHTML = totalMoney;
-          console.log(totalMoney);
+        if (money > totalMoney) {
+          alert("구매불가");
         } else {
-          alert("구매불가,잔액부족");
+          totalMoney = totalMoney - money;
         }
+        printTotalMoney();
+        const message = `음료를 구매하였습니다. (${money}원.)`;
+        printMessage(message);
       };
 
-      const change = (money) => {
+      const change = () => {
         totalMoney = 0;
 
-        console.log(totalMoney);
+        printTotalMoney();
+        printMessage(`잔돈을 반환하였습니다.`);
+      };
+      const printTotalMoney = () => {
+        document.querySelector("#total-money").innerHTML = totalMoney;
+      };
+      const printMessage = (message) => {
+        document.querySelector("#message").innerHTML = message;
       };
     </script>
   </body>
