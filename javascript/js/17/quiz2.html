@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #row {
+      width: 50px;
+      height: 20px;
+      text-align: center;
+    }
+    #colume {
+      width: 50px;
+      height: 20px;
+      text-align: center;
+    }
+    #push {
+      width: 60px;
+    }
+    tr,
+    td {
+      width: 100px;
+      padding: 10px;
+      border: 1px solid lightgray;
+      border-collapse: collapse;
+    }
+  </style>
+  <body>
+    <div class="table">
+      <input type="text" id="row" />행 <input type="text" id="colume" />열
+      <button id="push">작성</button>
+    </div>
+    <table class="makeTable"></table>
+    <script>
+      const push = document.querySelector("#push");
+      const table = document.querySelector(".makeTable");
+
+      push.addEventListener("click", () => {
+        const row = document.getElementById("row").value;
+        const colume = document.getElementById("colume").value;
+
+        console.log(row);
+        console.log(colume);
+
+        for (let i = 0; i < row; i++) {
+          const newT = document.createElement("tr");
+          table.appendChild(newT);
+
+          for (let j = 0; j < colume; j++) {
+            const newD = document.createElement("td");
+            const a = "+i";
+            newT.appendChild(newD);
+            newD.innerText = `${i}, ${j}`;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="addImg()">더보기</button>
+    <button onclick="removeImg()">삭제</button>
+    <div id="info"></div>
+    <script>
+      const addP = () => {
+        const newP = document.createElement("p");
+        const txtNode = document.createTextNode(
+          "DOM은 document object model의 줄임말입니다."
+        );
+        newP.appendChild(txtNode);
+        document.getElementById("info").appendChild(newP);
+      };
+      const addImg = () => {
+        const newImg = document.createElement("img");
+        newImg.src =
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbC9ELPecjx8os-EveaBxju9B2LFHfS4TY2Q&usqp=CAU";
+        document.getElementById("info").appendChild(newImg);
+      };
+    </script>
+  </body>
+</html>

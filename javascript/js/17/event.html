@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR93N76j1RHRInw6MH9OJDV7iGqGbCfefRbYw&usqp=CAU"
+      id="cover"
+    />
+    <script>
+      const cover = document.getElementById("cover");
+      cover.addEventListener("mouseover", changePic);
+      cover.addEventListener("mouseout", originPic);
+
+      function changePic() {
+        cover.src =
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP6M3IuRDWFdO2gu4YvyP6IY3p2SGHsZN1zQ&usqp=CAU";
+        cover.style.borderRadius = "50%";
+      }
+      function originPic() {
+        cover.src =
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR93N76j1RHRInw6MH9OJDV7iGqGbCfefRbYw&usqp=CAU";
+        cover.style.borderRadius = "";
+      }
+    </script>
+  </body>
+</html>

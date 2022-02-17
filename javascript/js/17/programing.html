@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    ul {
+      list-style: none;
+    }
+    li {
+      padding: 10px;
+    }
+
+    .search {
+      width: 35%;
+      height: 26px;
+
+      border: 2px solid rgb(61, 102, 238);
+    }
+    .plus {
+      background-color: black;
+      padding: 5px 30px;
+      color: white;
+    }
+  </style>
+  <body>
+    <form>
+      <div id="subject">
+        <h1>Web Programming</h1>
+        <p>공부할 주제를 기록해 보세요</p>
+        <input type="text" class="search" />
+        <button class="plus" onclick="newRegister(); return false;">
+          추가
+        </button>
+      </div>
+    </form>
+    <script>
+      function newRegister() {
+        const newItem = document.createElement("li");
+        const subject = document.querySelector("#subject");
+        const newText = document.createTextNode(subject.value);
+
+        newitem.appendChild(newText);
+
+        const itemlist = document.querySelector("#itemlist");
+        itemList.appendChild(newItem);
+
+        subject.value = "";
+
+        const items = document.querySelectorAll("li");
+        for (i = 0; i < items.length; i++) {
+          items[i].addEventListener("click", function () {
+            if (this.parentNode) this.parentNode.removeChild(this);
+          });
+        }
+      }
+    </script>
+  </body>
+</html>
