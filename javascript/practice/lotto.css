@@ -1,0 +1,56 @@
+h1 {
+  text-align: center;
+}
+ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+li {
+  margin: 10px;
+}
+#container {
+  background: rgb(192, 236, 255);
+}
+.main-center {
+  background-color: white;
+  border-radius: 50px;
+  margin: 0 20px;
+  padding: 0 55px;
+}
+.lotto-number {
+  display: flex;
+  width: 10px;
+  height: 10px;
+  font-size: 20px;
+  padding: 20px;
+  color: white;
+  background-color: rgb(93, 208, 253);
+  border-radius: 50%;
+  align-items: center;
+}
+.lotto-number.yellow {
+  background: rgb(248, 248, 18);
+  color: black;
+}
+.lotto-number.blue {
+  background-color: skyblue;
+}
+.lotto-number.red {
+  background-color: rgb(255, 128, 9);
+}
+.lotto-number.gray {
+  background-color: gainsboro;
+}
+.lotto-number.green {
+  background-color: rgb(125, 219, 37);
+}
+#btnClick {
+  padding: 10px 20px;
+  background: rgb(48, 120, 255);
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  border-radius: 50px;
+}
