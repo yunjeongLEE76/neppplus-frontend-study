@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>발사</button><button>멈춰</button>
+    <p id="message"></p>
+
+    <script>
+      const $message = document.querySelector("#message");
+      const $btnFire = document.querySelector("#btn-fire");
+      const $btnStop = document.querySelector("#btn-stop");
+      let intervlId = "";
+      let timeoutId = "";
+
+      const disableButton = (isfire) => {
+        if (isFire) {
+          $btnFire.disabled = "disabled";
+          $btnStop.disabled = "";
+        } else {
+          $btnFire.disabled = "";
+          $btnStop.disabled = "disabled";
+        }
+      };
+
+      $btnFire.addEventlistener("click", () => {
+        disableButtonsOnFire(true);
+      });
+      intervalId = setInterval(() => {
+        $message.innerText = --i;
+      }, 1000);
+
+      timeoutId = setTimeout(() => {
+        clearInterval(intervalId);
+        alert("발사 성공");
+        disableButtonsOnFire(false);
+      }, 5000);
+
+      $btnStop.addEventListener("click", () => {});
+    </script>
+  </body>
+</html>
