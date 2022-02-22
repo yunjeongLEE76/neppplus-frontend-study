@@ -1,0 +1,8 @@
+.accordion {
+  margin: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 4px;
+}
+.accordion-item.active .accordion-body {
+  display: block;
+}
