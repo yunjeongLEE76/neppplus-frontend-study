@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>짝수끼리 더하기</h1>
+    <script>
+      for (let i = 1; i <= 10; i++) {
+        let sum = 0;
+        if (i % 2 === 1) continue;
+
+        sum += i;
+
+        document.write(`${i}-------${sum}<br>`);
+      } ///중괄호 생각해보면서 쓰기
+    </script>
+  </body>
+</html>
