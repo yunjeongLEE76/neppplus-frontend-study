@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="./button.css" />
+  <link rel="stylesheet" href="./toast.css" />
+  <body>
+    <button class="btn-blue btn-toast">열기</button>
+
+    <div class="toast">
+      <div class="toast-header">
+        <div class="square"></div>
+        <span class="toast-title">Bootstrap </span
+        ><span class="toast-datetime">11 mins ago</span>
+        <button class="btn-close"></button>
+      </div>
+      <div class="toast-body">Hello, world! This is a toast message.</div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      //   const $btnToast = document.querySelector("btn-toast");
+      //   $btnToast.addEventListener("click", () => {
+      //     const $toast = document.querySelector(".toast");
+      //     $toast.classList.add("active");
+      //   });
+
+      $(".btn-toast").on("click", () => {
+        $(".toast").toggleClass("active");
+      });
+      //jquery on=addEventListener
+    </script>
+  </body>
+</html>
