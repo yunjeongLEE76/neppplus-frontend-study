@@ -9,12 +9,22 @@
   <link rel="stylesheet" href="./button.css" />
   <link rel="stylesheet" href="./toast.css" />
   <body>
-    <button class="btn-blue btn-toast">열기</button>
+    <button class="btn-blue btn-toast-1">토스트 1열기</button>
+    <button class="btn-blue btn-toast-2">토스트 2열기</button>
 
-    <div class="toast">
+    <div class="toast toast-1">
       <div class="toast-header">
         <div class="square"></div>
-        <span class="toast-title">Bootstrap </span
+        <span class="toast-title">토스트1 </span
+        ><span class="toast-datetime">11 mins ago</span>
+        <button class="btn-close"></button>
+      </div>
+      <div class="toast-body">Hello, world! This is a toast message.</div>
+    </div>
+    <div class="toast toast-2">
+      <div class="toast-header">
+        <div class="square"></div>
+        <span class="toast-title">토스트2 </span
         ><span class="toast-datetime">11 mins ago</span>
         <button class="btn-close"></button>
       </div>
@@ -32,9 +42,14 @@
       //     $toast.classList.add("active");
       //   });
 
-      $(".btn-toast").on("click", () => {
-        $(".toast").toggleClass("active");
+      $(".btn-toast-1").on("click", () => {
+        $(".toast-1").toggleClass("active");
+
+        setTimeout(() => {
+          $(".toast-1").removeClass("active");
+        }, 3000);
       });
+
       //jquery on=addEventListener
     </script>
   </body>
