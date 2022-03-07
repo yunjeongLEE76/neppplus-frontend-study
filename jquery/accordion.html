@@ -5,6 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./accordion.css" />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body></body>
+  <body>
+    <ul class="accordion">
+      <li class="accordion-item">
+        <div class="accordion-header">Accordion Item #1</div>
+        <div class="accordion-body">
+          This is the third item's accordion body. It is hidden by default,
+          until the collapse plugin adds the appropriate classes that we use to
+          style each element. These classes control the overall appearance, as
+          well as the showing
+        </div>
+      </li>
+      <li class="accordion-item">
+        <div class="accordion-header">Accordion Item #1</div>
+        <div class="accordion-body">
+          This is the third item's accordion body. It is hidden by default,
+          until the collapse plugin adds the appropriate classes that we use to
+          style each element. These classes control the overall appearance, as
+          well as the showing
+        </div>
+      </li>
+      <li class="accordion-item">
+        <div class="accordion-header">Accordion Item #1</div>
+        <div class="accordion-body">
+          This is the third item's accordion body. It is hidden by default,
+          until the collapse plugin adds the appropriate classes that we use to
+          style each element. These classes control the overall appearance, as
+          well as the showing
+        </div>
+      </li>
+    </ul>
+
+    <script>
+      $(".accordion-header").click(function () {
+        $(this).closest(".accordion-item").toggleClass("active");
+      });
+    </script>
+  </body>
 </html>

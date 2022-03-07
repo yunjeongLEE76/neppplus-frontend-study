@@ -50,7 +50,21 @@
         }, 3000);
       });
 
+      $(".btn-toast-2").on("click", () => {
+        $(".toast-2").toggleClass("active");
+
+        setTimeout(() => {
+          $(".toast-2").removeClass("active");
+        }, 3000);
+      });
       //jquery on=addEventListener
+
+      $(".btn-close").click(function () {
+        $(this).closest(".toast").removeClass("active");
+      });
+      $(".btn-close").click((e) => {
+        $(e.currentTarget).closest(".toast").removeClass("actives");
+      });
     </script>
   </body>
 </html>
