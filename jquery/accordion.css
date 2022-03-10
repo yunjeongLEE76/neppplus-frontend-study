@@ -3,11 +3,6 @@ ul {
   margin: 0;
   list-style: none;
 }
-.accordion {
-  margin: 50px;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 4px;
-}
 .accordion-item.active .accordion-body {
   display: block;
 }
@@ -15,8 +10,13 @@ ul {
   color: #0c63e4;
   background-color: #e7f1ff;
 }
-.accordion-item + .accordion-item {
+.accordion li + li {
   border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+.accordion {
+  margin: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 4px;
 }
 .accordion-header {
   padding: 16px 20px;
