@@ -1,0 +1,28 @@
+ul {
+  list-style: none;
+  display: flex;
+}
+li {
+  border-right: 1px solid #ccc;
+}
+a {
+  text-decoration: none;
+  color: #ccc;
+  padding: 0 8px;
+  font-size: 14px;
+}
+.main-logo {
+  width: 122px;
+  /* max-width: 100%; */
+  /* height: auto; */
+}
+.header-menu {
+  justify-content: center;
+}
+.container {
+  background-color: #333;
+  text-align: center;
+}
+.btn-list {
+  display: flex;
+}
