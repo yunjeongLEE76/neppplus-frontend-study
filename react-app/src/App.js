@@ -1,8 +1,12 @@
-import MyComponent from "./components/MyComponent";
 import "./App.css";
+import Say from "./components/Say";
 
 function App() {
-  return <MyComponent />;
+  return (
+    <>
+      <Say />
+    </>
+  );
 }
 
 export default App;
