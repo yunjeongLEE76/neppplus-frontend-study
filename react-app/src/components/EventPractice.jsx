@@ -1,36 +1,30 @@
 import { useState } from "react";
 
 const EventPractice = () => {
-  //   const [message, setMessage] = useState("");
-  //   const [userName, setUserName] = useState("");
+  // const [userName, setUserName] = useState("");
+  // const [message, setUserMessage] = useState("");
 
   const [form, setForm] = useState({
     userName: "",
     message: "",
   });
 
-  const { userName, message } = form;
-
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-
-    const newForm = { ...form, [name]: value };
-    setForm(newForm);
   };
-  //   const handleChangeMessage = (e) => {
-  //     setMessage(e.target.value);
-  //   };
+  // const handleMessage = (e) => {
+  //   setUserMessage(e.target.value);
+  // };
+
   const handleClick = () => {
     alert(userName + ":" + message);
   };
-
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
       handleClick();
     }
   };
-
   return (
     <div>
       <h1>이벤트 연습</h1>
