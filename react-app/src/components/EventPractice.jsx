@@ -9,13 +9,15 @@ const EventPractice = () => {
     message: "",
   });
 
+  const { userName, message } = form;
+
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
+
+    const newForm = { ...form, [name]: value };
+    setForm(newForm);
   };
-  // const handleMessage = (e) => {
-  //   setUserMessage(e.target.value);
-  // };
 
   const handleClick = () => {
     alert(userName + ":" + message);
