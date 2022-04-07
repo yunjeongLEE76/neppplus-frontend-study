@@ -20,7 +20,13 @@ const IterationSample = () => {
     setNextId(nextId + 1);
   };
 
-  const handleDelete = () => {};
+  const handleDelete = (id) => {
+    console.log(id);
+    const newNames = names.fillter((name) => {
+      return name.id !== id;
+    });
+    setNames(newNames);
+  };
   const handleChange = (e) => {
     setText(e.target.value);
   };
