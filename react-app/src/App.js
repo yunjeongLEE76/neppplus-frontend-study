@@ -1,10 +1,10 @@
 import "./App.css";
-import IterationSample from "./components/IterationSample";
+import Info from "./components/Info";
 
 function App() {
   return (
     <>
-      <IterationSample />
+      <Info />
     </>
   );
 }

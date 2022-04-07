@@ -22,9 +22,7 @@ const IterationSample = () => {
 
   const handleDelete = (id) => {
     console.log(id);
-    const newNames = names.fillter((name) => {
-      return name.id !== id;
-    });
+    const newNames = names.filter((name) => name.id !== id);
     setNames(newNames);
   };
   const handleChange = (e) => {
@@ -37,7 +35,7 @@ const IterationSample = () => {
       <button onClick={handleClick}>추가</button>
       <ul>
         {names.map((name, index) => (
-          <li key={name.id} onDobleClick={() => handleDelete(name.id)}>
+          <li key={name.id} onDoubleClick={() => handleDelete(name.id)}>
             {name.id}: {name.text}
           </li>
         ))}
